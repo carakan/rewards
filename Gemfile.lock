@@ -1,0 +1,33 @@
+PATH
+  remote: .
+  specs:
+    rewards (0.1.0)
+      rubytree (~> 0.3)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    byebug (11.0.1)
+    json (1.8.6)
+    minitest (5.12.2)
+    minitest-byebug (0.0.3)
+      byebug
+      minitest (~> 5.0)
+    rake (10.5.0)
+    rubytree (0.9.7)
+      json (~> 1.8)
+      structured_warnings (~> 0.2)
+    structured_warnings (0.4.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 2.0)
+  minitest (~> 5.0)
+  minitest-byebug
+  rake (~> 10.0)
+  rewards!
+
+BUNDLED WITH
+   2.0.2
