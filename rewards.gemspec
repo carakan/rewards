@@ -33,6 +33,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'minitest', '~> 5.0'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'minitest-byebug'
+  spec.add_development_dependency 'rack-test'
 
   spec.add_dependency 'rubytree', '~> 0.3'
   spec.add_dependency 'sinatra'
