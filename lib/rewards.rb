@@ -11,7 +11,6 @@ post '/process' do
 
   parser = Rewards::Parser.new(params[:file][:tempfile])
   parser.call
-  puts parser.tree.print_tree
   calculator = Rewards::Calculator.new(parser.tree)
   calculator.call
 
