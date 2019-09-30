@@ -1,43 +1,27 @@
 # Rewards
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rewards`. To experiment with that code, run `bin/console` for an interactive prompt.
+Code challenge to show my knowledge using ruby/RoR.
 
-TODO: Delete this and the text above, and describe your gem
+# Installation
 
-## Installation
+run: 
 
-Add this line to your application's Gemfile:
+```
+bundle install
+ruby lib/rewards.rb
+```
+and now visit `http://localhost:4567/process`
 
-```ruby
-gem 'rewards'
+to test the code:
+
+```
+rake test
 ```
 
-And then execute:
+# Rationale
 
-    $ bundle
+First, I made two modules, one is the `rewards/parser` this parses a file, validates and create a tree with a hierarchy of recommendations by date (basic order), each node represent in a graph of who recommends and if a user/node accepts that invitation, to create/represent the tree I'm using `rubytree` gem to reuse code.
 
-Or install it yourself as:
+The second module (rewards/calculator) is for made calculations for a tree of recommendations, this evaluates based in a weight K (default value 1) and iterates to nodes to found a node with content TRUE, and later calculates k/2 for each parent and stores the accumulation in a hash.
 
-    $ gem install rewards
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/rewards. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the Rewards project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/rewards/blob/master/CODE_OF_CONDUCT.md).
+Lastly, I made a simple endpoint using Sinatra, first an HTML form to upload a file, and this makes a POST request to a webservice and render a JSON with the response. ng in the Rewards project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/rewards/blob/master/CODE_OF_CONDUCT.md).
