@@ -35,4 +35,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'minitest-byebug'
 
   spec.add_dependency 'rubytree', '~> 0.3'
+  spec.add_dependency 'sinatra'
 end

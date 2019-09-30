@@ -3,6 +3,7 @@ PATH
   specs:
     rewards (0.1.0)
       rubytree (~> 0.3)
+      sinatra
 
 GEM
   remote: https://rubygems.org/
@@ -13,11 +14,21 @@ GEM
     minitest-byebug (0.0.3)
       byebug
       minitest (~> 5.0)
+    mustermann (1.0.3)
+    rack (2.0.7)
+    rack-protection (2.0.7)
+      rack
     rake (10.5.0)
     rubytree (0.9.7)
       json (~> 1.8)
       structured_warnings (~> 0.2)
+    sinatra (2.0.7)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.7)
+      tilt (~> 2.0)
     structured_warnings (0.4.0)
+    tilt (2.0.10)
 
 PLATFORMS
   ruby
